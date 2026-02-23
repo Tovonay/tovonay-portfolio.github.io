@@ -2,73 +2,185 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Rock Tovonay | Data Analyst</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rock Tovonay</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f1f5f9;
+        }
+
+        header {
+            background: #1e293b;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        header h1 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #f1f5f9;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 100px 50px;
+            min-height: 100vh;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            background: #38bdf8;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: #334155;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        footer {
+            background: #1e293b;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:768px){
+            header{
+                flex-direction: column;
+            }
+
+            nav{
+                margin-top:10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Rock Tovonay RABENARIVO</h1>
-    <p>Data Analyst | Python | SQL | Data Visualization</p>
-    <a href="https://github.com/Tovonay" target="_blank" class="btn">Voir mon GitHub</a>
+    <h1>Rock.dev</h1>
+    <nav>
+        <a href="#home">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<section class="about">
+<section id="home" class="hero">
+    <h2>Développeur Web & Data Analyst</h2>
+    <p>
+        Passionné par le développement web, l'analyse de données et les solutions IT modernes.
+        Je crée des applications performantes et élégantes.
+    </p>
+    <a href="#projects" class="btn">Voir mes projets</a>
+</section>
+
+<section id="about">
     <h2>À propos de moi</h2>
     <p>
-        Passionné par l'analyse de données, le nettoyage, l'audit qualité
-        et la visualisation. J'aide à transformer des données brutes
-        en décisions stratégiques.
+        Je suis développeur spécialisé en HTML, CSS, Python et analyse de données avec Pandas.
+        J’aime concevoir des solutions robustes et sécurisées.
     </p>
+    <a href="https://github.com/Tovonay" target="_blank" class="btn">Voir mon GitHub</a>
 </section>
 
-<section class="skills">
-    <h2>Compétences Techniques</h2>
-    <ul>
-        <li>Python (Pandas, NumPy)</li>
-        <li>SQL</li>
-        <li>Data Cleaning & Data Quality</li>
-        <li>Visualisation (Matplotlib, Plotly)</li>
-        <li>PostgreSQL</li>
-    </ul>
+<section id="projects">
+    <h2>Mes Projets</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Dashboard IT</h3>
+            <p>Supervision réseau avec Python et PostgreSQL.</p>
+        </div>
+
+        <div class="card">
+            <h3>Analyse Marché Afrique</h3>
+            <p>Nettoyage et visualisation de données avec Pandas.</p>
+        </div>
+
+        <div class="card">
+            <h3>Site E-commerce</h3>
+            <p>Développement frontend moderne et responsive.</p>
+        </div>
+    </div>
 </section>
 
-<section class="projects">
-    <h2>Projets Data</h2>
-
-    <div class="card">
-        <h3>Audit & Nettoyage Africa Market</h3>
-        <p>
-            Analyse complète : valeurs manquantes, doublons,
-            incohérences, valeurs aberrantes.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Dashboard NAS Monitoring</h3>
-        <p>
-            Supervision multi-NAS avec scoring intelligent
-            et base PostgreSQL.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Analyse Ventes Produits</h3>
-        <p>
-            Analyse par catégorie, détection anomalies,
-            KPI et tendances.
-        </p>
-    </div>
-
-</section>
-
-<section class="tools">
-    <h2>Outils</h2>
-    <p>VS Code • Jupyter Notebook • Git • GitHub • Linux</p>
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email : rock@example.com</p>
 </section>
 
 <footer>
-    <p>📍 Madagascar | 📧 rocktovonay@gmail.com</p>
+    © 2026 Rock Tovonay - Tous droits réservés
 </footer>
 
 </body>
